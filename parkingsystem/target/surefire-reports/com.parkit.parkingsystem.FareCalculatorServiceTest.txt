@@ -1,4 +1,22 @@
 -------------------------------------------------------------------------------
 Test set: com.parkit.parkingsystem.FareCalculatorServiceTest
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.07 s - in com.parkit.parkingsystem.FareCalculatorServiceTest
+Tests run: 9, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 0.091 s <<< FAILURE! - in com.parkit.parkingsystem.FareCalculatorServiceTest
+calculateFareUnkownType  Time elapsed: 0.019 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	Lambda expressions are allowed only at source level 1.8 or above
+
+	at com.parkit.parkingsystem.FareCalculatorServiceTest.calculateFareUnkownType(FareCalculatorServiceTest.java:69)
+
+calculateFareCarWithLessThan30minutesParkingTime  Time elapsed: 0.005 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0.0> but was: <0.75>
+	at com.parkit.parkingsystem.FareCalculatorServiceTest.calculateFareCarWithLessThan30minutesParkingTime(FareCalculatorServiceTest.java:137)
+
+calculateFareBikeWithFutureInTime  Time elapsed: 0 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	Lambda expressions are allowed only at source level 1.8 or above
+
+	at com.parkit.parkingsystem.FareCalculatorServiceTest.calculateFareBikeWithFutureInTime(FareCalculatorServiceTest.java:82)
+
