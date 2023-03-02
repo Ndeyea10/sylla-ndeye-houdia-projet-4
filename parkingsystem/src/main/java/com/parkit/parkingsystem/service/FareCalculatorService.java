@@ -10,7 +10,7 @@ public class FareCalculatorService {
             throw new IllegalArgumentException("Out time provided is incorrect:"+ticket.getOutTime().toString());
         }
 
-        long inHour = ticket.getInTime().getTime();
+        long inHour = ticket.getInTime().getTime(); 
         long outHour = ticket.getOutTime().getTime();
 
         //TODO: Some tests are failing here. Need to check if this logic is correct
@@ -19,7 +19,7 @@ public class FareCalculatorService {
 
         switch (ticket.getParkingSpot().getParkingType()){
             case CAR: {
-                  if (duration <=30){
+                  if (duration <=30){ //duration less than or equal to 30 minutes
                     ticket.setPrice(0* Fare.CAR_RATE_PER_HOUR);
                 }
                 else{

@@ -1,22 +1,24 @@
 -------------------------------------------------------------------------------
 Test set: com.parkit.parkingsystem.FareCalculatorServiceTest
 -------------------------------------------------------------------------------
-Tests run: 9, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 0.091 s <<< FAILURE! - in com.parkit.parkingsystem.FareCalculatorServiceTest
-calculateFareUnkownType  Time elapsed: 0.019 s  <<< ERROR!
-java.lang.Error: 
-Unresolved compilation problem: 
-	Lambda expressions are allowed only at source level 1.8 or above
+Tests run: 9, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.115 s <<< FAILURE! - in com.parkit.parkingsystem.FareCalculatorServiceTest
+calculateFareCarWithLessThanOneHourParkingTime  Time elapsed: 0.051 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1.125> but was: <0.0>
+	at com.parkit.parkingsystem.FareCalculatorServiceTest.calculateFareCarWithLessThanOneHourParkingTime(FareCalculatorServiceTest.java:110)
 
-	at com.parkit.parkingsystem.FareCalculatorServiceTest.calculateFareUnkownType(FareCalculatorServiceTest.java:69)
+calculateFareCar  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0.0> but was: <1.5>
+	at com.parkit.parkingsystem.FareCalculatorServiceTest.calculateFareCar(FareCalculatorServiceTest.java:42)
 
-calculateFareCarWithLessThan30minutesParkingTime  Time elapsed: 0.005 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <0.0> but was: <0.75>
-	at com.parkit.parkingsystem.FareCalculatorServiceTest.calculateFareCarWithLessThan30minutesParkingTime(FareCalculatorServiceTest.java:137)
+calculateFareBike  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0.0> but was: <1.0>
+	at com.parkit.parkingsystem.FareCalculatorServiceTest.calculateFareBike(FareCalculatorServiceTest.java:56)
 
-calculateFareBikeWithFutureInTime  Time elapsed: 0 s  <<< ERROR!
-java.lang.Error: 
-Unresolved compilation problem: 
-	Lambda expressions are allowed only at source level 1.8 or above
+calculateFareCarWithMoreThanADayParkingTime  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <36.0> but was: <0.0>
+	at com.parkit.parkingsystem.FareCalculatorServiceTest.calculateFareCarWithMoreThanADayParkingTime(FareCalculatorServiceTest.java:124)
 
-	at com.parkit.parkingsystem.FareCalculatorServiceTest.calculateFareBikeWithFutureInTime(FareCalculatorServiceTest.java:82)
+calculateFareBikeWithLessThanOneHourParkingTime  Time elapsed: 0.003 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0.75> but was: <0.0>
+	at com.parkit.parkingsystem.FareCalculatorServiceTest.calculateFareBikeWithLessThanOneHourParkingTime(FareCalculatorServiceTest.java:96)
 
