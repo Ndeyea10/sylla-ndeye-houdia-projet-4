@@ -86,4 +86,12 @@ public class TicketDAO {
         }
         return false;
     }
+    public int getNbTicket(){
+        int nbTicketCar =0;
+        Ticket ticket = null;
+        if(this.saveTicket(ticket) == true){
+            nbTicketCar++;
+        }
+        return nbTicketCar;
+    }
 }
