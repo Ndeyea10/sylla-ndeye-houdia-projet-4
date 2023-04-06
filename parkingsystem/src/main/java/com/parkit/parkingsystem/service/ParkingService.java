@@ -45,7 +45,6 @@ public class ParkingService {
                 ticket.setInTime(inTime);
                 ticket.setOutTime(null);
                 ticketDAO.saveTicket(ticket);
-                fareCalculatorService.calculateFare(ticket, true);
                 System.out.println("Welcome");
                 System.out.println("Generated Ticket and saved in DB");
                 System.out.println("Please park your vehicle in spot number:"+parkingSpot.getId());
@@ -69,7 +68,11 @@ public class ParkingService {
             parkingNumber = parkingSpotDAO.getNextAvailableSlot(parkingType);
             if(parkingNumber > 0){
                 parkingSpot = new ParkingSpot(parkingNumber,parkingType, true);
+                System.out.println(" availability : " + parkingSpot.isAvailable());
+                System.out.println(" spot number  : " + parkingSpot.getId());
             }else{
+                parkingSpot = new ParkingSpot(parkingNumber,parkingType, false);
+                System.out.println(" aucun spot disponible :" + parkingSpot.isAvailable() );
                 throw new Exception("Error fetching parking number from DB. Parking slots might be full");
             }
         }catch(IllegalArgumentException ie){
@@ -105,7 +108,15 @@ public class ParkingService {
             Ticket ticket = ticketDAO.getTicket(vehicleRegNumber);
             Date outTime = new Date();
             ticket.setOutTime(outTime);
-            fareCalculatorService.calculateFare(ticket);
+            if(ticketDAO.getNbTicket(vehicleRegNumber)>1){
+                fareCalculatorService.calculateFare(ticket, true);
+                ticket.setPrice(0.95 * ticket.getPrice());
+            }
+            else
+            {
+                fareCalculatorService.calculateFare(ticket);
+            }
+          
             if(ticketDAO.updateTicket(ticket)) {
                 ParkingSpot parkingSpot = ticket.getParkingSpot();
                 parkingSpot.setAvailable(true);

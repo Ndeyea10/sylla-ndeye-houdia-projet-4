@@ -17,11 +17,13 @@ public class FareCalculatorService {
     double duration = outHour - inHour;
     duration = (duration/(1000*60*60));
 
+    if (duration <=30){ //duration less than or equal to 30 minutes
+      ticket.setPrice(0);
+    }
+
     switch (ticket.getParkingSpot().getParkingType()){
         case CAR: {
-              if (duration <=30){ //duration less than or equal to 30 minutes
-                ticket.setPrice(0);
-              }
+           
               if(discount==true){
                 ticket.setPrice(0.95 * Fare.CAR_RATE_PER_HOUR);
               }
@@ -32,9 +34,7 @@ public class FareCalculatorService {
           break;
         }
         case BIKE: {
-            if(duration <=30){
-                ticket.setPrice(0);
-            }
+      
             if(discount == true){
               ticket.setPrice(0.95 * Fare.BIKE_RATE_PER_HOUR);
             }

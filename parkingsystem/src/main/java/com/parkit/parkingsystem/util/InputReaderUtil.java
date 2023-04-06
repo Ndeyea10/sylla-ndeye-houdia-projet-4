@@ -13,6 +13,11 @@ public class InputReaderUtil {
     public int readSelection() {
         try {
             int input = Integer.parseInt(scan.nextLine());
+              if (input >2){
+                System.out.println("Aucun spot");
+                return input;
+            }
+            else
             return input;
         }catch(Exception e){
             logger.error("Error while reading user input from Shell", e);

@@ -1,4 +1,25 @@
 -------------------------------------------------------------------------------
 Test set: com.parkit.parkingsystem.integration.ParkingDataBaseIT
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.052 s - in com.parkit.parkingsystem.integration.ParkingDataBaseIT
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 3.449 s <<< FAILURE! - in com.parkit.parkingsystem.integration.ParkingDataBaseIT
+testParkingLotExit  Time elapsed: 2.318 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	Ticket cannot be resolved to a variable
+	The method any(Class<Ticket>) is undefined for the type ParkingDataBaseIT
+	Mockito cannot be resolved
+	The method any(Class<Ticket>) is undefined for the type ParkingDataBaseIT
+
+	at com.parkit.parkingsystem.integration.ParkingDataBaseIT.testParkingACar(ParkingDataBaseIT.java:56)
+	at com.parkit.parkingsystem.integration.ParkingDataBaseIT.testParkingLotExit(ParkingDataBaseIT.java:69)
+
+testParkingACar  Time elapsed: 0.25 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	Ticket cannot be resolved to a variable
+	The method any(Class<Ticket>) is undefined for the type ParkingDataBaseIT
+	Mockito cannot be resolved
+	The method any(Class<Ticket>) is undefined for the type ParkingDataBaseIT
+
+	at com.parkit.parkingsystem.integration.ParkingDataBaseIT.testParkingACar(ParkingDataBaseIT.java:56)
+
