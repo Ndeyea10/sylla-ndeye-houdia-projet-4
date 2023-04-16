@@ -1,0 +1,33 @@
+# Created at 2023-04-13T16:58:07.503
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: null
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:397)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+
+# Created at 2023-04-13T16:58:08.702
+Unexpected IOException: 5,1,com.parkit.parkingsystem.integration.ParkingDataBaseIT,testParkingLotExitRecurringUser,null,null,null
+
+
+# Created at 2023-04-13T16:58:11.041
+Unexpected IOException with stream: 2023-04-13 16:58:11 INFO  DataBaseTestConfig:14 - Create DB connection
+
+
+# Created at 2023-04-13T16:58:28.456
+Unexpected IOException with stream: 2023-04-13 16:58:28 INFO  DataBaseTestConfig:24 - Closing DB connection
+
+
+# Created at 2023-04-13T16:58:28.882
+Unexpected IOException: 7,1,com.parkit.parkingsystem.integration.ParkingDataBaseIT,testParkingLotExitRecurringUser,null,Unresolved compilation problem: \000A\0009Fare cannot be resolved to a variable\000A,null,Unresolved compilation problem: \000A\0009Fare cannot be resolved to a variable\000A,ParkingDataBaseIT.testParkingLotExitRecurringUser:92  Unresolved compilation p...,java.lang.Error: \000AUnresolved compilation problem: \000A\0009Fare cannot be resolved to a variable\000A\000A\0009at com.parkit.parkingsystem.integration.ParkingDataBaseIT.testParkingLotExitRecurringUser(ParkingDataBaseIT.java:92)\000A
+
+
+# Created at 2023-04-13T16:58:28.893
+Unexpected IOException: 5,1,com.parkit.parkingsystem.integration.ParkingDataBaseIT,testParkingLotExit,null,null,null
+
+
+# Created at 2023-04-13T16:58:28.915
+Unexpected IOException with stream: 2023-04-13 16:58:28 INFO  DataBaseTestConfig:14 - Create DB connection
+
+

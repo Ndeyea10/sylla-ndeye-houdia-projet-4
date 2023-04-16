@@ -141,7 +141,6 @@ public class ParkingServiceTest {
         parkingService.getNextParkingNumberIfAvailable();
 
         verify(inputReaderUtil, Mockito.times(1)).readSelection();
-     //   verify(parkingSpotDAO, Mockito.times(1)).getNextAvailableSlot(any(ParkingType.class));
 
     }
 }
